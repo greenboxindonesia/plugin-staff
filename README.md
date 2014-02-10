@@ -1,4 +1,4 @@
-Plugin "Pengurus" for Struktur Profile Organization
+<h1>Plugin "Pengurus" for Struktur Profile Organization</h1>
 
 Plugin ini digunakan untuk menambahkan custom field post sendiri untuk management post profile pengurus. Ada beberapa field kosong dalam bentuk meta box untuk default isian profile dan biodata.
 
