@@ -57,7 +57,7 @@ add_meta_box( 'profile_pengurus_meta_box',
 }
 
 function display_profile_pengurus_meta_box( $profile_pengurus ) {
-// Retrieve current name of the Director and Movie Rating based on review ID
+// metabox on each post profile pengurus
 $nama = esc_html( get_post_meta( $profile_pengurus->ID, 'nama', true ) );
 $tahun_jabatan = esc_html( get_post_meta( $profile_pengurus->ID, 'tahun_jabatan', true ) );
 $universitas = esc_html( get_post_meta( $profile_pengurus->ID, 'universitas', true ) );
