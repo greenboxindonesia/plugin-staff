@@ -1,8 +1,8 @@
 <?php
 /*
-* Single Profile Pengurus
+* Single Profile Staff
 * Author: Albert Sukmono
-* Description: Template Plugin "Pengurus" for view content post profile
+* Description: Template Plugin "Staff" for view content post profile
 */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
             </div><!--/.span12 -->
         </div><!--/.row -->
 		<div class="row content">
-		<?php $post_id = get_the_ID('profile_pengurus'); ?>
+		<?php $post_id = get_the_ID('staff'); ?>
 		<!-- Cycle through all posts -->
 		<?php while ( have_posts() ) : the_post(); ?>
 			<!-- Display featured image in right-aligned floating div -->
@@ -85,9 +85,9 @@ get_header(); ?>
 								$nb_stars = intval( get_post_meta( get_the_ID(), 'user_rating', true ) );
 								for ( $star_counter = 1; $star_counter <= 5; $star_counter++ ) {
 									if ( $star_counter <= $nb_stars ) {
-										echo '<img src="' . plugins_url( 'pengurus/images/icon.png' ) . '" />';
+										echo '<img src="' . plugins_url( 'staff/images/icon.png' ) . '" />';
 									} else {
-										echo '<img src="' . plugins_url( 'pengurus/images/grey.png' ). '" />';
+										echo '<img src="' . plugins_url( 'staff/images/grey.png' ). '" />';
 									}
 								}
 								?>
@@ -95,7 +95,7 @@ get_header(); ?>
 					</tr>
 				</table>
 				<br />
-				<!-- Display description "pengurus" contents -->
+				<!-- Display description "staff" contents -->
 				<div class="deskripsi-profile">Sekilas</div>
 				<div class="entry-content"><?php the_content(); ?></div>
 				<br />
