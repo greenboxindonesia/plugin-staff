@@ -61,7 +61,7 @@ get_header(); ?>
                                 );
                             }
                         } else {
-                            _e('Arsip Profile Staff', 'bootstrapwp');
+                            _e('Arsip Staff', 'bootstrapwp');
                         }
                         ?></h2>
                 </header>
@@ -105,5 +105,5 @@ get_header(); ?>
             <?php endif; ?>
         </div>
 
-    <?php get_sidebar('office'); ?>
+    <?php get_sidebar('staff'); ?>
     <?php get_footer(); ?>
