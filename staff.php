@@ -30,22 +30,58 @@ array(
 	'No Staff found in Trash',
 	'parent' => 'Parent Staff'
 	),
-	
+
 	'public' => true,
 	'publicly_queryable' => true,
-	'rewrite' => true,
+	'rewrite' => array( 'slug' => 'staff','with_front' => false, 'hierarchical' => true),
 	'show_ui' => true,
 	'query_var' => true,
 	'capability_type' => 'post',
 	'menu_position' => 20,
 	'supports' => array( 'title', 'editor', 'comments',	'thumbnail' ),
-	'taxonomies' => array( 'category', 'post_tag' ),
-	'hierarchical' => true,
+	'taxonomies' => array( 'staff_diary_post_type'),
 	'register_meta_box_cb' => 'staff_meta_box',
 	'menu_icon' => plugins_url( 'images/favicon.png', __FILE__ ),
 	'has_archive' => true	
 )
 );
+flush_rewrite_rules();
+}
+/*
+ * create taxonomy
+ */
+// hook into the init action and call create_staff_taxonomies when it fires
+add_action( 'init', 'staff_taxonomies', 0 );
+// create for the post type "staff"
+function staff_taxonomies() {
+    $labels = array(
+        'name'              => _x( 'Staff Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Staff Category', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Categories' ),
+        'all_items'         => __( 'All Categories' ),
+        'parent_item'       => __( 'Parent Category' ),
+        'parent_item_colon' => __( 'Parent Category:' ),
+        'edit_item'         => __( 'Edit Category' ),
+        'update_item'       => __( 'Update Category' ),
+        'add_new_item'      => __( 'Add New Category' ),
+        'new_item_name'     => __( 'New Category Name' ),
+        'menu_name'         => __( 'Categories' ),
+    );
+
+    $args = array(
+        'hierarchical'      => true, // Set this to 'false' for non-hierarchical taxonomy (like tags)
+        'labels'            => $labels,
+        'show_ui'           => true,
+		'show_in_nav_menus' => true,
+		'publicly_queryable' => true,
+		'exclude_from_search' => false,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite' 			=> array( 'slug' => 'staff_diary_post_type', 'with_front' => true ),
+		'has_archive' 		=> true
+    );
+
+    register_taxonomy( 'staff_categories', array( 'staff' ), $args );
 }
 
 add_action( 'admin_init', 'staff_admin' );
