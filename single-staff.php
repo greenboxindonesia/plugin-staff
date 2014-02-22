@@ -6,16 +6,20 @@
 */
 
 get_header(); ?>
+
+	<?php if (have_posts()) :  // Queue the first post.
+    the_post(); ?>
+	
 <div class="container">
         <div class="row">
             <div class="span12">
-                <?php if (function_exists('bootstrapwp_breadcrumbs')) {
-                bootstrapwp_breadcrumbs();
+                <?php if (function_exists('bootstrapwp_breadcrumbs_staff')) {
+                bootstrapwp_breadcrumbs_staff();
                 } ?>
             </div><!--/.span12 -->
         </div><!--/.row -->
 		<div class="row content">
-		<?php $post_id = get_the_ID('staff'); ?>
+		
 		<!-- Cycle through all posts -->
 		<?php while ( have_posts() ) : the_post(); ?>
 			<!-- Display featured image in right-aligned floating div -->
