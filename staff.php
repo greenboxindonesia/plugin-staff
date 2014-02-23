@@ -37,9 +37,9 @@ array(
 	'show_ui' => true,
 	'query_var' => true,
 	'capability_type' => 'post',
-	'menu_position' => 20,
+	'menu_position' => 5,
 	'supports' => array( 'title', 'editor', 'comments',	'thumbnail' ),
-	'taxonomies' => array( 'staff_diary_post_type'),
+	'taxonomies' => array( 'staff_archive'),
 	'register_meta_box_cb' => 'staff_meta_box',
 	'menu_icon' => plugins_url( 'images/favicon.png', __FILE__ ),
 	'has_archive' => true	
@@ -77,7 +77,7 @@ function staff_taxonomies() {
 		'exclude_from_search' => false,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite' 			=> array( 'slug' => 'staff_diary_post_type', 'with_front' => true ),
+        'rewrite' 			=> array( 'slug' => 'staff_archive', 'with_front' => true ),
 		'has_archive' 		=> true
     );
 
