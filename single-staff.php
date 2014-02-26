@@ -21,7 +21,13 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<!-- Display featured image in right-aligned floating div -->
 			<div class="pic-profile">
-				<div class="image-post-single"><?php the_post_thumbnail('full', array('class' => 'profile')); ?></div>
+				<div class="image-post-single">
+				<?php if ( has_post_thumbnail() ) {
+				the_post_thumbnail('full', array('class' => 'profile'));
+				} else { ?>
+				<img style="width:330px;height:auto;" src="<?php bloginfo('template_directory'); ?>/img/no-image-thumb.svg" alt="<?php the_title(); ?>" />
+				<?php } ?>
+				</div>
 			</div>
 			<div class="isi-profile">
 			<!-- Display Title and Metabox -->
