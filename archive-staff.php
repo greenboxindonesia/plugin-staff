@@ -14,9 +14,9 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="span12">
-                <?php if (function_exists('bootstrapwp_breadcrumbs')) {
-                bootstrapwp_breadcrumbs();
-            } ?>
+                <?php if (function_exists('bootstrapwp_breadcrumbs_staff')) {
+                bootstrapwp_breadcrumbs_staff();
+                } ?>
             </div>
         </div>
 
