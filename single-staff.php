@@ -2,7 +2,7 @@
 /*
 * Single Profile Staff
 * Author: Albert Sukmono
-* Description: Template Plugin "Staff" for view content post profile
+* Description: Single Template Plugin "Staff" for view content post profile
 */
 
 get_header(); ?>
