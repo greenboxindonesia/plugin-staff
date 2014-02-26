@@ -7,9 +7,6 @@
 
 get_header(); ?>
 
-	<?php if (have_posts()) :  // Queue the first post.
-    the_post(); ?>
-	
 <div class="container">
         <div class="row">
             <div class="span12">
