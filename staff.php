@@ -100,7 +100,7 @@ add_meta_box(
 }
 
 function display_staff_meta_box( $staff ) {
-// Retrieve current name of the Director and Movie Rating based on review ID
+// metabox list ID on post
 $nama = esc_html( get_post_meta( $staff->ID, 'nama', true ) );
 $tahun_jabatan = esc_html( get_post_meta( $staff->ID, 'tahun_jabatan', true ) );
 $universitas = esc_html( get_post_meta( $staff->ID, 'universitas', true ) );
