@@ -11,7 +11,9 @@ Fungsi Plugin "Staff" ini meliputi beberapa fungsi antara lain:
 <li>Template Archive dan Single Post Profile Staff</li>
 </ol>
 
-Pentunjuk Penginstalaan: Download file plugin "Staff" ini dalam bentuk .zip rubah file nama file.zip tersebut dengan nama <code>staff.zip</code> lalu upload lewat dashboard anda pada pilihan plugin dan add new plugin upload.
+<h3>Pentunjuk Penginstalaan</h3>
+
+Download file plugin "Staff" ini dalam bentuk .zip rubah file nama file.zip tersebut dengan nama <code>staff.zip</code> lalu upload lewat dashboard anda pada pilihan plugin dan add new plugin upload.
 
 Plugin ini khusus difungsikan untuk menambahkan fitur fungsi dan fasilitas untuk menagement data profile pengurus pada theme stadart Cabang HMI. Untuk themes selain themes standart HMI Cabang masih belum pada tahap test/ dicoba lebih lanjut terhadap kompatible tidaknya.
 
