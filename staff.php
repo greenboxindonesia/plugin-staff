@@ -47,6 +47,7 @@ array(
 );
 flush_rewrite_rules();
 }
+
 /*
  * create taxonomy
  */
@@ -84,6 +85,9 @@ function staff_taxonomies() {
     register_taxonomy( 'staff_categories', array( 'staff' ), $args );
 }
 
+/*
+ * create metabox
+ */
 add_action( 'admin_init', 'staff_admin' );
 
 function staff_admin() {
