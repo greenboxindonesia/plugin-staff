@@ -1,8 +1,8 @@
 <?php
 /*
-* Template Single Profile Staff
+* Archive Template Profile Staff
 * Author: Albert Sukmono
-* Description: Single Template Plugin "Staff" for view content post profile
+* Description: Archive Template Plugin "Staff" for view content post profile
 */
 
 get_header(); ?>
