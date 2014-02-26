@@ -1,10 +1,10 @@
 <?php
-/**
- * The template for displaying Archive pages.
- *
- * @package WordPress
- * @subpackage Bootstrap
- */
+/*
+* Template Single Profile Staff
+* Author: Albert Sukmono
+* Description: Single Template Plugin "Staff" for view content post profile
+*/
+
 get_header(); ?>
 
     <?php if (have_posts()) :
