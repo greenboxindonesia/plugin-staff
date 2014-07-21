@@ -49,6 +49,15 @@ flush_rewrite_rules();
 }
 
 /*
+ * HIDE THE EDITOR ON CERTAIN CUSTOM POST TYPES 
+*/
+add_action('admin_head', 'hide_editor'); 
+function hide_editor() { 
+	if(get_post_type() == 'staff') //staff merupakan nama post type
+	{ ?> <style> #postdivrich { display:none; } </style> <?php } 
+}
+
+/*
  * create taxonomy
  */
 // hook into the init action and call create_staff_taxonomies when it fires
